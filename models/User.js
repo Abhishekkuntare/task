@@ -24,7 +24,7 @@ const schema = new mongoose.Schema({
   role: {
     type: String,
     enum: ["admin", "user"],
-    default: "user",
+    default: "admin",
   },
 
   avatar: {
@@ -37,7 +37,7 @@ const schema = new mongoose.Schema({
       required: true,
     },
   },
- 
+
   createdAt: {
     type: Date,
     default: Date.now,
