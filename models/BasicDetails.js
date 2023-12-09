@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const BasicDetailsSchema = new mongoose.Schema({
+const DetailsSchema = new mongoose.Schema({
+  Info: {
     hNo: {
       type: String,
       required: true,
@@ -24,12 +25,11 @@ const BasicDetailsSchema = new mongoose.Schema({
     phoneNo: {
       type: Number,
       required: true,
+    },
   },
-
-  
   createdAt: {
     type: Date,
     default: Date.now(),
   },
 });
-export const BasicDetails = mongoose.model("BasicDetails", BasicDetailsSchema);
+export const BasicDetails = mongoose.model("BasicDetails", DetailsSchema);

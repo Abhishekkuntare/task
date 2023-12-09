@@ -1,10 +1,9 @@
 import express from "express";
-import {isAuthenticated } from "../middlewares/auth.js";
-
-import { BasicDetailsCom } from "../controllers/BasicDetailsController.js";
+import { isAuthenticated } from "../middlewares/auth.js";
+import { BasicDetailsCon } from "../controllers/BasicDetailsController.js";
 
 const router = express.Router();
 
-router.post("/basicdetails", isAuthenticated, BasicDetailsCom);
+router.post("/basicdetails", isAuthenticated, BasicDetailsCon);
 
 export default router;
